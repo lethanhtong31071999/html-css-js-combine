@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  margin: 0;
+  overflow-x: hidden;
+
+  background: #333;
+  color: #222;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+
+  background-color: #fafafa;
+  transform-origin: top left;
+
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+
+  width: 200px;
+  height: 200px;
+
+  background-color: transparent;
+  transition: transform 0.5s linear;
+}
+
+.circle-container.show-nav {
+  transform: rotate(-90deg);
+}
+
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+
+  border-radius: 50%;
+
+  background-color: #ff7979;
+
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.circle.show-nav {
+  transform: rotate(20deg);
+}
+
+.circle button {
+  position: absolute;
+  bottom: 25%;
+  transform: translateY(50%);
+
+  border: 0;
+  background: transparent;
+
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+.circle button#open {
+  right: 50px;
+  transform: translateX(50%);
+}
+.circle button#close {
+  right: 150px;
+  transform: translateX(50%);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.content img {
+  max-width: 100%;
+}
+.content h1 {
+  margin: 0;
+}
+.content small {
+  color: #555;
+  font-style: italic;
+}
+.content p {
+  color: #333;
+  line-height: 1;
+}
+
+/*====================================== NAVIGATION ============================*/
+nav {
+  position: fixed;
+  left: 0;
+  bottom: 40px;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: white;
+  margin: 40px 0;
+  cursor: pointer;
+  transform: translateX(-200%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li:hover i {
+  opacity: 0.8;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="main.css" />
+    <title>Facebook</title>
+  </head>
+  <body class="bg-gray">
+    <!-- login -->
+    <div
+      class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5"
+    >
+      <!-- heading -->
+      <div class="text-center text-lg-start mt-lg-5 pt-lg-5">
+        <h1 class="text-primary fw-bold fs-0">flexbook</h1>
+        <p class="w-75 mx-auto mx-lg-0 fs-4">
+          Flexbook helps you connect and share with the people in your life.
+        </p>
+      </div>
+      <!-- form -->
+      <div style="flex: 1">
+        <div class="bg-white shadow rounded p-3 input-group-lg">
+          <input
+            type="text"
+            class="form-control my-3"
+            placeholder="Email address or phone number"
+          />
+          <input
+            type="password"
+            class="form-control my-3"
+            placeholder="Password"
+          />
+          <a href="#">
+            <button class="btn btn-primary w-100 my-3">Log in</button>
+          </a>
+          <a href="#" class="text-decoration-none text-center">
+            <p>Forgottten password?</p>
+          </a>
+          <!-- create form -->
+          <hr />
+          <div class="text-center my-4">
+            <button
+              class="btn btn-success btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#createModal"
+            >
+              Create New Account
+            </button>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="createModal"
+            tabindex="-1"
+            aria-labelledby="createModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- head -->
+                <div class="modal-header">
+                  <div>
+                    <h2 class="modal-title" id="createModalLabel">Sign up</h2>
+                    <p class="text-muted fs-7">It's quick and easy.</p>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                  <form>
+                    <!-- name -->
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="First name"
+                        />
+                      </div>
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Sur name"
+                        />
+                      </div>
+                    </div>
+                    <!-- email & pass -->
+                    <input
+                      type="text"
+                      class="form-control my-3"
+                      placeholder="Mobile number or email address"
+                    />
+                    <input
+                      type="text"
+                      class="form-control my-3"
+                      placeholder="New password"
+                    />
+                    <!-- DoB -->
+                    <div class="row my-3">
+                      <span class="text-muted fs-7"
+                        >Date of birth
+                        <i
+                          class="fas fa-question-circle"
+                          data-bs-container="body"
+                          data-bs-toggle="popover"
+                          data-bs-placement="right"
+                          data-bs-content="Four options are available"
+                        ></i>
+                      </span>
+                      <div class="col">
+                        <select class="form-select">
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="col">
+                        <select class="form-select">
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="col">
+                        <select class="form-select">
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- gender -->
+                    <div class="row my-3">
+                      <span class="text-muted fs-7"
+                        >Gender
+                        <i
+                          class="fas fa-question-circle"
+                          data-bs-container="body"
+                          data-bs-toggle="popover"
+                          data-bs-placement="right"
+                          data-bs-content="Four options are available"
+                        ></i
+                      ></span>
+                      <div class="col">
+                        <div class="border rounded p-2">
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault1"
+                          >
+                            Male
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                          />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="border rounded p-2">
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault2"
+                          >
+                            Female
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault2"
+                            checked
+                          />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="border rounded p-2">
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault3"
+                          >
+                            Custom
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- gender selector -->
+                    <div class="d-none" id="genderSelect">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <div class="my-3">
+                        <span class="text-muted"
+                          >Your pronoun is visible to everyone</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Gender (optional)"
+                        />
+                      </div>
+                    </div>
+                    <!-- disclaimer -->
+                    <div>
+                      <span class="text-muted fs-7"
+                        >Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Facilis quae perferendis, quasi minima pariatur
+                        nihil.</span
+                      >
+                    </div>
+                    <!-- btn -->
+                    <div class="my-3 text-center">
+                      <button
+                        type="button"
+                        class="btn btn-success btn-lg"
+                        data-bs-dismiss="modal"
+                      >
+                        Sign Up
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+        </div>
+        <!-- tag -->
+        <div class="text-center pb-5 my-5">
+          <p class="fw-bold">
+            <a class="text-decoration-none text-dark" href="#">
+              Create a Page
+              <span class="fw-normal">for a celebrity, band or business.</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="bg-white p-4 text-muted">
+      <div class="container">
+        <!-- language -->
+        <div class="d-flex flex-wrap">
+          <p class="mx-2 fs-7 mb-0">English(US)</p>
+          <p class="mx-2 fs-7 mb-0">Vietnamese(VN)</p>
+          <p class="mx-2 fs-7 mb-0">Chinese(CN)</p>
+          <p class="mx-2 fs-7 mb-0">Korean(KR)</p>
+        </div>
+        <hr />
+        <!-- actions -->
+        <div class="d-flex flex-wrap">
+          <p class="mx-2 fs-7 mb-0">Sign Up</p>
+          <p class="mx-2 fs-7 mb-0">Login</p>
+          <p class="mx-2 fs-7 mb-0">Messenger)</p>
+          <p class="mx-2 fs-7 mb-0">Facebook Lite</p>
+          <p class="mx-2 fs-7 mb-0">Watch</p>
+        </div>
+        <!-- copyright -->
+        <div class="mt-4 mx-2">
+          <p class="fs-7">Flexbook &copy; 2023</p>
+        </div>
+      </div>
+    </footer>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- main js -->
+    <script src="./main.js"></script>
+  </body>
+</html>
